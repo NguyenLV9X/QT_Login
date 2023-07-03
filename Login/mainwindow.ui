@@ -210,6 +210,9 @@ background-color: rgb(180, 180, 180);
                  <property name="text">
                   <string/>
                  </property>
+                 <property name="maxLength">
+                  <number>25</number>
+                 </property>
                  <property name="echoMode">
                   <enum>QLineEdit::Password</enum>
                  </property>
@@ -224,6 +227,19 @@ background-color: rgb(180, 180, 180);
                  </property>
                 </widget>
                </item>
+               <item>
+                <widget class="QPushButton" name="button_pass">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+border: 0px;
+background-color: rgb(180, 180, 180);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
               </layout>
              </widget>
             </item>
@@ -231,8 +247,19 @@ background-color: rgb(180, 180, 180);
              <layout class="QHBoxLayout" name="horizontalLayout_2">
               <item>
                <widget class="QCheckBox" name="checkBox">
+                <property name="font">
+                 <font>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">#checkBox {
+color: #717171;
+}</string>
+                </property>
                 <property name="text">
-                 <string>CheckBox</string>
+                 <string>Giữ trạng thái đăng nhâp</string>
                 </property>
                </widget>
               </item>

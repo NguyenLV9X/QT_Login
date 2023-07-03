@@ -30,10 +30,32 @@ MainWindow::MainWindow(QWidget *parent)
     ui->lineEdit_pass->setAttribute(Qt::WA_StyledBackground, true);
     QObject::connect(ui->lineEdit_pass, &customLineEdit::send,ui->widget_pass,&customWidget::receiveP);
 
+    QIcon iconShow(QPixmap(":/resources/image/show_icon.ico"));
+    ui->button_pass->setIcon(iconShow);
+    ui->button_pass->setIconSize(QSize(30,30));
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+
+void MainWindow::on_button_pass_clicked()
+{
+    QLineEdit::EchoMode	 status = ui->lineEdit_pass->echoMode();
+    if(status != QLineEdit::Normal)
+    {
+        ui->lineEdit_pass->setEchoMode(QLineEdit::Normal);
+        QIcon iconShow(QPixmap(":/resources/image/hide_icon.ico"));
+        ui->button_pass->setIcon(iconShow);
+    }
+    else
+    {
+        ui->lineEdit_pass->setEchoMode(QLineEdit::Password);
+        QIcon iconShow(QPixmap(":/resources/image/show_icon.ico"));
+        ui->button_pass->setIcon(iconShow);
+    }
 }
 

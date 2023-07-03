@@ -2,5 +2,7 @@
     <qresource prefix="/resources">
         <file>image/icon.ico</file>
         <file>image/camera.jpg</file>
+        <file>image/show_icon.ico</file>
+        <file>image/hide_icon.ico</file>
     </qresource>
 </RCC>
